@@ -33,6 +33,9 @@ class TweetSpiderByTweetID(Spider):
         网页解析
         """
         data = json.loads(response.text)
+        print("="*100)
+        print(data)
+        print("="*100)
         item = parse_tweet_info(data)
         if item['isLongText']:
             url = "https://weibo.com/ajax/statuses/longtext?id=" + item['mblogid']

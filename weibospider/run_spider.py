@@ -20,6 +20,7 @@ from spiders.repost import RepostSpider
 
 if __name__ == '__main__':
     mode = sys.argv[1]
+    # mode = "comment"
     os.environ['SCRAPY_SETTINGS_MODULE'] = 'settings'
     settings = get_project_settings()
     process = CrawlerProcess(settings)
